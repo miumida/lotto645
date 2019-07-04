@@ -3,8 +3,8 @@
 
 # Installation
 *HA 설치 경로 아래 custom_components 에 파일을 넣어줍니다.
-><config directory>/custom_components/lotto645/__init__.py
-><config directory>/custom_components/lotto645/manifest.json
-><config directory>/custom_components/lotto645/sensor.py
+  `<config directory>/custom_components/lotto645/__init__.py`
+  `<config directory>/custom_components/lotto645/manifest.json`
+  `<config directory>/custom_components/lotto645/sensor.py`
 *configuration.yaml 파일에 설정을 추가합니다.
 *Home-Assistant 를 재시작합니다
