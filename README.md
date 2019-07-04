@@ -4,7 +4,7 @@
 
 ![screenshot_1](https://github.com/miumida/lotto645/blob/master/Screenshot_1.png)<br>
 ![screenshot_2](https://github.com/miumida/lotto645/blob/master/Screenshot_2.png)
-
+<br><br>
 ## Installation
 - HA 설치 경로 아래 custom_components 에 파일을 넣어줍니다.<br>
   `<config directory>/custom_components/lotto645/__init__.py`<br>
@@ -12,12 +12,11 @@
   `<config directory>/custom_components/lotto645/sensor.py`<br>
 - configuration.yaml 파일에 설정을 추가합니다.<br>
 - Home-Assistant 를 재시작합니다<br>
-
-
+<br><br>
 ## Usage
 ### configuration
 - HA 설정에 lotto645 sensor를 추가합니다.<br>
-```XML
+```yaml
 sensor:
   - platform: lotto645
 ```
