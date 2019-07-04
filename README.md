@@ -1,5 +1,5 @@
 # Lotto 6/45 Sensor
-로또 6/45 당첨번호를 알려주는 Home Assistant Sensor 입니다.
+로또 6/45 당첨번호를 알려주는 Home Assistant Sensor 입니다.<br>
 당첨번호 번호1 번호2 번호3 번호4 번호5 번호6 + 보너스 형태로 보여줍니다.
 
 ![screenshot_1](https://github.com/miumida/lotto645/blob/master/Screenshot_1.png)<br>
