@@ -14,5 +14,5 @@
 - HA 설정에 anniversary sensor를 추가합니다.<br>
 ```XML
 sensor:
-  - platform: anniversary
+  - platform: lotto645
 ```
