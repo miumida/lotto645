@@ -1,6 +1,8 @@
 # Lotto 6/45 Sensor
 로또 6/45 당첨번호를 알려주는 Home Assistant Sensor 입니다.
 
+![screenshot_1](./screenshot_2.png)
+![screenshot_2](./screenshot_2.png)
 
 ## Installation
 - HA 설치 경로 아래 custom_components 에 파일을 넣어줍니다.<br>
