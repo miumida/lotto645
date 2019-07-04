@@ -11,7 +11,7 @@
 
 # Usage
 ### configuration
-- HA 설정에 anniversary sensor를 추가합니다.<br>
+- HA 설정에 lotto645 sensor를 추가합니다.<br>
 ```XML
 sensor:
   - platform: lotto645
