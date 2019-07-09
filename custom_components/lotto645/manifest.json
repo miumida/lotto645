@@ -1,0 +1,10 @@
+{
+  "domain": "lotto645",
+  "name": "lotto645",
+  "documentation": "https://github.com/miumida/lotto645",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [
+    "@miumida"
+  ]
+}
