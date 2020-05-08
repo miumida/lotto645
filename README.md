@@ -3,8 +3,16 @@
 당첨번호 `번호1 번호2 번호3 번호4 번호5 번호6 + 보너스` 형태로 보여줍니다.
 
 ![screenshot_1](https://github.com/miumida/lotto645/blob/master/Screenshot_1.png)<br>
-![screenshot_2](https://github.com/miumida/lotto645/blob/master/Screenshot_2.png)
-<br><br>
+![screenshot_2](https://github.com/miumida/lotto645/blob/master/Screenshot_2.png)<br>
+
+<br>
+
+## Version history
+| Version | Date        | 내용              |
+| :-----: | :---------: | ----------------------- |
+| v1.0    | 2020.01.15  | First version  |
+| v1.1    | 2020.05.09  | 로또정보 URL 수정  |
+
 ## Installation
 - HA 설치 경로 아래 custom_components 에 파일을 넣어줍니다.<br>
   `<config directory>/custom_components/lotto645/__init__.py`<br>
