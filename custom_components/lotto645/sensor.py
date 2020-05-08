@@ -72,7 +72,7 @@ class lotto645API:
             dt = datetime.now()
             syncDate = dt.strftime("%Y-%m-%d %H:%M:%S")
 
-            url = NANUM_BSE_URL
+            url = BSE_URL
 
             response = requests.get(url, timeout=10)
             response.raise_for_status()
