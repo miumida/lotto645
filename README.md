@@ -1,4 +1,9 @@
 # Lotto 6/45 Sensor
+
+![HAKC)][hakc-shield]
+![HACS][hacs-shield]
+![Version v1.2][version-shield]
+
 로또 6/45 당첨번호를 알려주는 Home Assistant Sensor 입니다.<br>
 당첨번호 `번호1 번호2 번호3 번호4 번호5 번호6 + 보너스` 형태로 보여줍니다.
 
@@ -29,3 +34,7 @@
 sensor:
   - platform: lotto645
 ```
+
+[version-shield]: https://img.shields.io/badge/version-v1.2-orange.svg
+[hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
+[hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
