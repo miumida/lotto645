@@ -26,7 +26,6 @@ DEFAULT_ICON = 'mdi:numeric-6-circle'
 
 COMM_LOTTO_FORMAT = '{} {} {} {} {} {} + {}'
 
-MIN_TIME_BETWEEN_API_UPDATES    = timedelta(seconds=21600) #
 MIN_TIME_BETWEEN_SENSOR_UPDATES = timedelta(seconds=21600) #
 
 ATTR_NAME = 'name'
@@ -45,18 +44,18 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
 })
 
-def setup_platform(hass, config, add_entities, discovery_info=None):
-    name  = config.get(CONF_NAME)
+#def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
+#    name  = config.get(CONF_NAME)
 
-    sensors = []
+#    lotto = lotto645API(name)
 
-    lotto = lotto645API(name)
+#    async_add_entities([lotto645Sensor( name, lotto)], True)
 
-    lottoSensor = lotto645Sensor( name, lotto )
-    lottoSensor.update()
-    sensors += [lottoSensor]
+async def async_setup_entry(hass, config_entry, async_add_entities):
+    """Add a weather entity from a config_entry."""
+    lotto = lotto645API(DEFAULT_NAME)
 
-    add_entities(sensors, True)
+    async_add_entities([lotto645Sensor(DEFAULT_NAME, lotto)], True)
 
 class lotto645API:
 
@@ -65,7 +64,6 @@ class lotto645API:
         self._name      = name
         self.result     = {}
 
-    @Throttle(MIN_TIME_BETWEEN_API_UPDATES)
     def update(self):
         """Update function for updating api information."""
         try:
@@ -145,11 +143,6 @@ class lotto645Sensor(Entity):
     def state(self):
         """Return the state of the sensor."""
         return COMM_LOTTO_FORMAT.format(self.numbers.get('number_1','-'), self.numbers.get('number_2','-'), self.numbers.get('number_3','-'), self.numbers.get('number_4','-'), self.numbers.get('number_5','-'), self.numbers.get('number_6','-'), self.numbers.get('number_bonus','-'))
-
-    @property
-    def attribution(self):
-        """Return the attribution."""
-        return 'Powered by miumida'
 
     @Throttle(MIN_TIME_BETWEEN_SENSOR_UPDATES)
     def update(self):

@@ -5,11 +5,11 @@ from homeassistant import config_entries
 from .const import DOMAIN
 
 
-class SimpleConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class Lotto645ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for lotto645."""
 
     VERSION = 1
-    CONNECTION_CLASS = config_entries.CONN_CLASS_LOCAL_POLL
+    CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL
 
     async def async_step_user(self, user_input=None):
         """Handle the initial step."""
