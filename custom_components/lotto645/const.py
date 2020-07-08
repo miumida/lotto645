@@ -1,4 +1,3 @@
 """lotto645 constants."""
-
-DOMAIN = "lotto645"
+DOMAIN   = "lotto645"
 PLATFORM = "sensor"
