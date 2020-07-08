@@ -17,23 +17,30 @@
 | :-----: | :---------: | ----------------------- |
 | v1.0    | 2020.01.15  | First version  |
 | v1.1    | 2020.05.09  | 로또정보 URL 수정  |
-| v1.2    | 2020.07.08  | 통합구성요소   |
+| v1.2    | 2020.07.08  | 통합구성요소로 추가하기 적용 |
 
 ## Installation
+### Manual
 - HA 설치 경로 아래 custom_components 에 파일을 넣어줍니다.<br>
   `<config directory>/custom_components/lotto645/__init__.py`<br>
   `<config directory>/custom_components/lotto645/manifest.json`<br>
   `<config directory>/custom_components/lotto645/sensor.py`<br>
 - configuration.yaml 파일에 설정을 추가합니다.<br>
 - Home-Assistant 를 재시작합니다<br>
+### HACS
+- HACS > Intergrations > 설정 > Custom Repositories > '<https://github.com/miumida/lotto645>' 추가 후, 설치<br>
+- configuration.yaml 파일에 설정을 추가합니다.<br>
+- Home-Assistant 를 재시작합니다<br>
 <br><br>
 ## Usage
-### configuration
+### configuration(yaml)
 - HA 설정에 lotto645 sensor를 추가합니다.<br>
 ```yaml
 sensor:
   - platform: lotto645
 ```
+### configuration(통합구성요소)
+- 설정 > 통합구성요소 > 추가 > 'Lotto 6/45' 검색 후, 추가
 
 [version-shield]: https://img.shields.io/badge/version-v1.2-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
