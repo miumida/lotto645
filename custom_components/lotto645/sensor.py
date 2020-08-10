@@ -44,18 +44,18 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
 })
 
-#def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
-#    name  = config.get(CONF_NAME)
+def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
+    name  = config.get(CONF_NAME)
 
-#    lotto = lotto645API(name)
+    lotto = lotto645API(name)
 
-#    async_add_entities([lotto645Sensor( name, lotto)], True)
+    async_add_entities([lotto645Sensor( name, lotto)], True)
 
-async def async_setup_entry(hass, config_entry, async_add_entities):
-    """Add a weather entity from a config_entry."""
+async def async_setup_entry(hass, config_entry, async_add_devices):
+    """Add a entity from a config_entry."""
     lotto = lotto645API(DEFAULT_NAME)
 
-    async_add_entities([lotto645Sensor(DEFAULT_NAME, lotto)], True)
+    async_add_devices([lotto645Sensor(DEFAULT_NAME, lotto)])
 
 class lotto645API:
 
@@ -125,8 +125,8 @@ class lotto645Sensor(Entity):
         self.numbers    = {}
 
     @property
-    def entity_id(self):
-        """Return the entity ID."""
+    def unique_id(self):
+        """Return a unique ID to use for this sensor."""
         return 'sensor.lotto645'
 
     @property
@@ -162,3 +162,13 @@ class lotto645Sensor(Entity):
     def device_state_attributes(self):
         """Attributes."""
         return { key: self.numbers[key] for key in sorted(self.numbers.keys()) }
+
+    @property
+    def device_info(self):
+        return {
+            "identifiers": {('lotto645', 'sensor.lotto645')},
+            "name": 'Lotto 6/45',
+            "sw_version": '1.5',
+            "manufacturer": '동행복권',
+            "model": '로또 6/45',
+        }
