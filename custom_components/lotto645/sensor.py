@@ -12,6 +12,8 @@ from homeassistant.const import (CONF_NAME, CONF_API_KEY, CONF_ICON)
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
+from .const import SW_VERSION, MANUFAC, MODEL
+
 REQUIREMENTS = ['beautifulsoup4==4.6.0']
 
 _LOGGER = logging.getLogger(__name__)
@@ -168,7 +170,7 @@ class lotto645Sensor(Entity):
         return {
             "identifiers": {('lotto645', 'sensor.lotto645')},
             "name": 'Lotto 6/45',
-            "sw_version": '1.5',
-            "manufacturer": '동행복권',
-            "model": '로또 6/45',
+            "sw_version": SW_VERSION,
+            "manufacturer": MANUFAC,
+            "model": MODEL,
         }
