@@ -44,6 +44,6 @@ sensor:
 ### configuration(통합구성요소)
 - 설정 > 통합구성요소 > 추가 > 'Lotto 6/45' 검색 후, 추가
 
-[version-shield]: https://img.shields.io/badge/version-v1.3-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.4-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
