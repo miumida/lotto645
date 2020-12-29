@@ -41,9 +41,9 @@ def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
 
 async def async_setup_entry(hass, config_entry, async_add_devices):
     """Add a entity from a config_entry."""
-    lotto = lotto645API(DEFAULT_NAME)
+    lotto = OtosLottoAPI(DEFAULT_NAME)
 
-    async_add_devices([lotto645Sensor(DEFAULT_NAME, lotto)])
+    async_add_devices([OtosLottoNumbersSensor(DEFAULT_NAME, lotto)])
 
 
 class OtosLottoAPI:
@@ -84,21 +84,21 @@ class OtosLottoAPI:
             latest_result = df.loc[0].to_dict()
 
             lotto_dict = {
-                "number_1": latest_result["num1"],
-                "number_2": latest_result["num2"],
-                "number_3": latest_result["num3"],
-                "number_4": latest_result["num4"],
-                "number_5": latest_result["num5"],
-                "year": latest_result["year"],
-                "week": latest_result["week"],
+                "number_1": int(latest_result["num1"]),
+                "number_2": int(latest_result["num2"]),
+                "number_3": int(latest_result["num3"]),
+                "number_4": int(latest_result["num4"]),
+                "number_5": int(latest_result["num5"]),
+                "year": int(latest_result["year"]),
+                "week": int(latest_result["week"]),
                 "lottery_date": latest_result["date"],
-                "no_of_5s": latest_result["no_of_5s"],
+                "no_of_5s": int(latest_result["no_of_5s"]),
                 "winnings_of_5s": latest_result["winnings_of_5s"],
-                "no_of_4s": latest_result["no_of_3s"],
+                "no_of_4s": int(latest_result["no_of_3s"]),
                 "winnings_of_4s": latest_result["winnings_of_4s"],
-                "no_of_3s": latest_result["no_of_3s"],
+                "no_of_3s": int(latest_result["no_of_3s"]),
                 "winnings_of_3s": latest_result["winnings_of_3s"],
-                "no_of_2s": latest_result["no_of_2s"],
+                "no_of_2s": int(latest_result["no_of_2s"]),
                 "winnings_of_2s": latest_result["winnings_of_2s"],
                 "sync_date": syncDate,
             }

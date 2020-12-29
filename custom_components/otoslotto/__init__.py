@@ -38,7 +38,7 @@ async def async_setup(hass: HomeAssistant, config: dict):
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     """Set up Otos Lotto Sensor [HUN] from a config entry."""
-    hass.data[DOMAIN][entry.entry_id] = OtosLottoAPI(entry.name)
+    hass.data.setdefault(DOMAIN, {}).update({entry.entry_id: OtosLottoAPI(DOMAIN)})
 
     for component in PLATFORMS:
         hass.async_create_task(
