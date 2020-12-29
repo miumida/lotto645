@@ -1,0 +1,13 @@
+{
+  "domain": "otoslotto",
+  "name": "Otos Lotto Sensor [HUN]",
+  "config_flow": true,
+  "documentation": "https://github.com/rjulius23/OtosLotto/blob/master/README.md",
+  "requirements": [
+    "pandas==1.2.0"
+  ],
+  "dependencies": [],
+  "codeowners": [
+    "@rjulius23"
+  ]
+}

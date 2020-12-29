@@ -1,0 +1,13 @@
+  "title": "Ötös Lottó",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Hungarian Ötös Lottó Sensor",
+        "description": "Do you want to set up Ötös Lottó Sensor ?"
+      }
+    },
+    "abort": {
+      "one_instance_allowed": "Only a single instance is necessary."
+    }
+  }
+}
