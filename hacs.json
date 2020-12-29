@@ -1,6 +1,6 @@
 {
-  "name": "[KR] Lotto 6/45 Sensor",
-  "country": "KR",
-  "homeassistant": "0.104.3",
+  "name": "[HUN] Ötös Lottó Sensor",
+  "country": "HUN",
+  "homeassistant": "2020.12.1",
   "render_readme": true
 }
