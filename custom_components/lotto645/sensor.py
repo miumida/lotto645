@@ -8,7 +8,7 @@ import homeassistant.helpers.config_validation as cv
 from datetime import timedelta
 from datetime import datetime
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import (CONF_NAME, CONF_API_KEY, CONF_ICON)
+from homeassistant.const import (CONF_NAME, CONF_ICON)
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
