@@ -12,7 +12,7 @@ from homeassistant.const import (CONF_NAME, CONF_ICON)
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
-from .const import SW_VERSION, MANUFAC, MODEL
+from .const import DOMAIN, SW_VERSION, MANUFAC, MODEL
 
 REQUIREMENTS = ['beautifulsoup4==4.6.0']
 
