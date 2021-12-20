@@ -161,7 +161,7 @@ class lotto645Sensor(Entity):
         self.numbers = lotto_dict
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Attributes."""
         return { key: self.numbers[key] for key in sorted(self.numbers.keys()) }
 
