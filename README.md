@@ -21,6 +21,7 @@
 | v1.3    | 2020.08.11  | device_info 속성 추가 |
 | v1.4    | 2020.12.14  | 버전체계 변경에 따른 수정   |
 | v1.5    | 2021.03.05  | manifest.json 파일 version 정보 추가  |
+| v1.5    | 2021.12.20  | 2021.12.0 대응  |
 
 ## Installation
 ### Manual
@@ -45,6 +46,6 @@ sensor:
 ### configuration(통합구성요소)
 - 설정 > 통합구성요소 > 추가 > 'Lotto 6/45' 검색 후, 추가
 
-[version-shield]: https://img.shields.io/badge/version-v1.5-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.6-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
