@@ -173,4 +173,5 @@ class lotto645Sensor(Entity):
             "sw_version": SW_VERSION,
             "manufacturer": MANUFAC,
             "model": MODEL,
+            "DeviceEntryType": 'service',
         }
